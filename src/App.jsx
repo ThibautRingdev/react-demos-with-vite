@@ -1,17 +1,16 @@
-import JSXrules from "./components/JSXRules"
+import Greeting from "./components/Greeting"
+import ProductInfo from "./components/ProductInfo"
 
 const App = () => {
-  const myName = "Thib Ring"
-  const multiply = (a, b) => a * b;
   return (
-  <section>
-    <p>2 * 2 = {multiply(2,2)}</p>
-    <h1>Mon prénom est {myName}</h1>
-    <p>Mes amis sont {['Pierre', 'Jacques', 'Paul']}</p>
-  <div> 
-    <JSXrules /> 
-  </div>
-  </section>
+    <section>
+      <div>
+        <Greeting/>
+      </div>
+      <div>
+        <ProductInfo/>
+      </div>
+    </section>
   )
 }
 
