@@ -1,15 +1,14 @@
-import Userlist from './components/loops/UserList';
-import ProductList from './components/loops/ProductList';
+import Person from "./components/loops/Person";
+import Product from "./components/loops/Product";
 
 const App = () => {
   return (
-    <main>
-      <Userlist />
-      <ProductList/>
-    </main>
+    <>
+      <Person name="Alice" age={28} />
+      <Person name="Bob" age={32} />
+      <Product name="iPad" price="600€" />
+    </>
   )
 }
 
 export default App;
-
-
