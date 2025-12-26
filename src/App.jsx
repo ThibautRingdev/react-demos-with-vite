@@ -1,14 +1,19 @@
-import Person from "./components/loops/Person";
-import Product from "./components/loops/Product";
+const ValidPassword = () => <h1>Mot de passe valide</h1>
+const InvalidPassword = () => <h1>Mot de passe invalide</h1>
+
+const Password = ({isValid}) => {
+  // if (isValid) {
+  //   return <ValidPassword/>;
+  // }
+  //   return <InvalidPassword/>;
+
+  return isValid ? <ValidPassword/> : <InvalidPassword/>;
+};
 
 const App = () => {
-  return (
-    <>
-      <Person name="Alice" age={28} />
-      <Person name="Bob" age={32} />
-      <Product name="iPad" price="600€" />
-    </>
-  )
+  return <section>
+    <Password isValid={true}/>
+  </section>
 }
 
 export default App;
