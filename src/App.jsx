@@ -1,19 +1,22 @@
-const ValidPassword = () => <h1>Mot de passe valide</h1>
-const InvalidPassword = () => <h1>Mot de passe invalide</h1>
+function Cart() {
+  const items=["Écouteurs sans fil", "Batterie externe", "Nouveau SSD", "Sweat à capuche"]
+  return <div>
+    <h1>Caddie 🛒</h1>
+    {items.length > 0 && <h2>Tu as  {items.length} objets dans ton caddie</h2>}
 
-const Password = ({isValid}) => {
-  // if (isValid) {
-  //   return <ValidPassword/>;
-  // }
-  //   return <InvalidPassword/>;
+    <ul>
+      <h4>Produits</h4>
 
-  return isValid ? <ValidPassword/> : <InvalidPassword/>;
-};
+      {items.map((item) => (
+      <li key={Math.random()}>{item}</li>
+    ))}
+    </ul>
+    </div>
+}
+
 
 const App = () => {
-  return <section>
-    <Password isValid={true}/>
-  </section>
+  return <Cart/>
 }
 
 export default App;
