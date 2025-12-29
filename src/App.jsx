@@ -1,23 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-const App = () => {
-  const [friends, setFriends] = useState(['Alex', 'John'])
+const App= () => {
+  const [movie, setMovie] = useState({
+    title: "Avatar : de Feu et de Cendres",
+    ratings : 6,
 
-  const addOneFriend = () => setFriends([...friends, "Thibaut"]);
-  const removeOneFriend = () => setFriends(friends.filter(f => f !== "Thibaut"));
-  const updateOneFriend = () => {
-    setFriends(friends.map(f => f === "Alex" ? "Alex Toucourt" : f));
+  });
+
+  const handleClick = () => {
+    // const  copyMovie = {
+    //   ...movie,
+    //   ratings: 5,
+    // }
+
+
+    setMovie({...movie, ratings: 5});
   }
 
- return <section>
-  {friends.map(f => (
-    <li key={f}>{f}</li>
-  ))}
-  <button onClick={addOneFriend}>Ajouter un nouvel ami</button>
-  <button onClick={removeOneFriend}>Retirer un ami de cette liste</button>
-  <button onClick={updateOneFriend}>Actualiser la liste</button>
- </section>;
+  return <section>
+    <h1>Titre: {movie.title}</h1>
+    <p>Note: {movie.ratings}/10</p>
+    <button onClick={handleClick}>Change Ratings</button>
+  </section>
+}
 
-};
-
-export default App;
+export default App
