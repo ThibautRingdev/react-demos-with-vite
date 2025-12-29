@@ -1,18 +1,14 @@
-const Move = () => {
-  function moveHandler() {
-    alert("Mouse move event fired");
-    console.log("Mouse move event fired");
-  }
+import { useState } from "react";
 
-  return <p onMouseMove={moveHandler}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum augue lorem. Vivamus imperdiet, leo. </p>
-}
+const App = () => {
+ const [count, setCount] = useState(0);
+ const increment = () => setCount(count+1)
 
-const App =() => {
-    return ( 
-    <section>
-        <Move/>
-    </section>
-    );
+ return <section>
+  <h1>{count}</h1>
+  <button onClick={increment}>Plus</button>
+ </section>;
+
 };
 
 export default App;
