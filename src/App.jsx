@@ -1,27 +1,25 @@
-import { useState } from 'react'
+import { useState } from "react"
 
-const App= () => {
-  const [movie, setMovie] = useState({
-    title: "Avatar : de Feu et de Cendres",
-    ratings : 6,
-
-  });
+const App = () => {
+  const [movies, setMovies] = useState([
+    {id: '1', title: "Spider-Man 1", ratings: 7},
+    {id: '2', title: "Spider-Man 2", ratings: 9},
+    {id: '3', title: "Spider-Man 3", ratings: 4}
+  ]);
 
   const handleClick = () => {
-    // const  copyMovie = {
-    //   ...movie,
-    //   ratings: 5,
-    // }
-
-
-    setMovie({...movie, ratings: 5});
+    setMovies(
+      movies.map(m => m.id === '1' ? {...m, title: "John Wick 4"} : m)
+    )
   }
 
   return <section>
-    <h1>Titre: {movie.title}</h1>
-    <p>Note: {movie.ratings}/10</p>
-    <button onClick={handleClick}>Change Ratings</button>
-  </section>
-}
+    {movies.map(m => (
+      <li key={m.id}>{m.title}</li>
+    ))}
 
-export default App
+    <button onClick={handleClick}>Change le nom avec ce bouton</button>
+  </section>;
+};
+
+export default App;
