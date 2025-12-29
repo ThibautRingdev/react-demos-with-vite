@@ -1,10 +1,9 @@
+import "./components/basics/index.css"
+
 const App = () => {
-  const styles = {color: "crimson", backgroundColor:"teal", padding: "2rem"}
   return (
     <section>
-    <h1 style={styles}>
-      Inline Style
-      </h1>
+    <h1> Separate File For Styling</h1>
     </section>
   );
 };
