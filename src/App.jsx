@@ -1,10 +1,18 @@
-const Button = () => {
-  const handleClick= () => console.log(Math.round(Math.random() * 10))
-  return <button onClick={handleClick}>Click</button>
-}
+const Copy = () => {
+  const copyHandler = (e) => {
+    e.preventDefault();
+    alert("Veuillez ne pas copier ce contenu !");
+  };
+
+  return (
+    <p onCopy={copyHandler}>
+    Lorem, ipsum dolor sit amet
+    </p>
+  );
+};
 
 function App() {
-    return <Button />;
+    return <Copy />;
 }
 
 export default App;
