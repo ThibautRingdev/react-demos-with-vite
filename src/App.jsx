@@ -1,26 +1,12 @@
-import Greeting from "./components/loops/Greeting";
-import UserStatus from "./components/loops/UserStatus";
-import Weather from "./components/loops/Weather";
-
-function App() {
+const App = () => {
+  const styles = {color: "crimson", backgroundColor:"teal", padding: "2rem"}
   return (
-    <div>
-      {/* Test de bonjour selon les horaire journalier */}
-      <Greeting timeOfDay="morning" />
-      <Greeting timeOfDay="afternoon" />
-      <Greeting timeOfDay="evening" />
-
-      {/* Test de température */}
-      <Weather temperature={10} />
-      <Weather temperature={20} />
-      <Weather temperature={30} />
-
-      {/* UserStatus tests */}
-      <UserStatus loggedIn={true} isAdmin={true} />
-      <UserStatus loggedIn={true} isAdmin={false} />
-      <UserStatus loggedIn={false} isAdmin={false} />
-    </div>
+    <section>
+    <h1 style={styles}>
+      Inline Style
+      </h1>
+    </section>
   );
-}
+};
 
 export default App;
