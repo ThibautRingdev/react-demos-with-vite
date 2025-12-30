@@ -1,0 +1,21 @@
+import React, { useState } from 'react'
+
+function ExempleOne() {
+
+const [count, setCount] = useState(() => {
+    const iniitialCount = 10;
+    return iniitialCount;
+})
+
+  const increment = () => {
+    setCount((prevCount) => prevCount + 1);
+  }
+
+
+  return <div>
+    <h1>Count: {count}</h1>
+  <button onClick={increment}>Increment</button>
+  </div>;
+};
+
+export default ExempleOne
