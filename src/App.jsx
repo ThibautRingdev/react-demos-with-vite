@@ -1,14 +1,16 @@
 import React from 'react';
-import ExempleOne from './components/Exemple/ExempleOne';
-import ExempleTwo from './components/Exemple/ExempleTwo';
-import ExempleThree from './components/Exemple/ExempleThree';
+import Counter from './components/useState/Exercice/Counter';
+import TodoList from './components/useState/Exercice/TodoList';
+import Profile from './components/useState/Exercice/Profile';
+import ShoppingList from './components/useState/Exercice/ShoppingList';
 
 function App() {
   return (
     <div>
-      <ExempleOne />
-      <ExempleTwo />
-      <ExempleThree/>
+      <Counter />
+      <TodoList />
+      <Profile />
+      <ShoppingList />
     </div>
   );
 }
